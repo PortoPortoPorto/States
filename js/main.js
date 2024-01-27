@@ -5,7 +5,7 @@ const matchList = document.querySelector('#match-list');
 
 async function searchStates(searchText) {
 	const res = await fetch('../data/states.json'); 
-	const states = await res.stringifyJSON(); 
+	const states = await res.json(); 
 
 	console.log(states); 
 }
@@ -14,3 +14,6 @@ async function searchStates(searchText) {
 
 
 searchInput.addEventListener('input', () => searchStates(search.value)); 
+
+
+
